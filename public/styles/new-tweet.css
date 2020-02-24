@@ -1,0 +1,30 @@
+.new-tweet {
+  background-color: inherit;
+}
+
+.new-tweet textarea {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border: none;
+  background-color: inherit;
+  color: #545149;
+  border-bottom: 2px solid #545149;
+}
+
+.new-tweet input {
+  border: none;
+  font-family: "Bungee";
+  font-size: 0.75em;
+  padding: 5px;
+  background-color: #4056A1;
+  color: #FFFFFF; 
+}
+
+.counter {
+  font-family: "Bungee";
+  font-size: 0.75em;
+  float: right
+}
