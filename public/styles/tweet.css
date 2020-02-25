@@ -12,6 +12,15 @@ article header {
   font-weight: 300;
 }
 
+article header div {
+  display: flex;
+  align-items: center;
+}
+
+.userphoto {
+  vertical-align: bottom;
+}
+
 
 article main {
   width: 100%;
@@ -40,10 +49,9 @@ article:hover footer {
 }
 
 .username {
-  font-size: 0;
+  color: transparent;
 }
 
 article:hover .username {
-  font-size: 1em;
   color: lightgrey;
 }
