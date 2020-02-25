@@ -55,7 +55,7 @@
             ${tweetContent}
           </main>
           <footer>
-            <p>${tweetDate}</p>
+            <p>${Math.round((Date.now()-tweetDate)/86400000)} days ago</p>
           </footer>
         </article>`;
 
