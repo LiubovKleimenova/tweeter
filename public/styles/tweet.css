@@ -12,17 +12,38 @@ article header {
   font-weight: 300;
 }
 
+
 article main {
   width: 100%;
   margin-top: 30px;
   padding-bottom: 20px;
   border-bottom: 3px solid #545149;
   outline: 1px dashed orange;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 article footer {
   font-size: 0.6em;
   padding: 0 10px;
   outline: 1px dashed blue;
+}
+
+article:hover {
+  box-shadow: 10px 10px 10px grey;
+  font-weight: 400;
+}
+
+article:hover header,
+article:hover main, 
+article:hover footer {
+  font-weight: 400;
+}
+
+.username {
+  font-size: 0;
+}
+
+article:hover .username {
+  font-size: 1em;
+  color: lightgrey;
 }
