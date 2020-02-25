@@ -1,0 +1,28 @@
+article {
+  border: 3px solid #545149;;
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px 10px 5px;
+}
+
+article header {
+  display: flex;
+  justify-content: space-between;
+  outline: 1px solid green;
+  font-weight: 300;
+}
+
+article main {
+  width: 100%;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #545149;
+  outline: 1px dashed orange;
+  font-weight: 400;
+}
+
+article footer {
+  font-size: 0.6em;
+  padding: 0 10px;
+  outline: 1px dashed blue;
+}
