@@ -1,6 +1,7 @@
 body > header {
   margin-top: 120px;
   position: relative;
+  z-index: 300;
   height: 400px;
   width: 100%;
   background-color: #4056A1;

@@ -41,7 +41,7 @@ const createTweetElement = function(tweet) {
         </header>
      
         <main class="tweet-main">
-          ${tweetContent}
+          ${escape(tweetContent)}
         </main>
         <footer class="tweet-footer">
           <p>${Math.round((Date.now() - tweetDate) / SECONDS)} days ago</p>
@@ -56,7 +56,16 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
 $(document).ready(function() {
+
+  
   loadTweets();
 
   //add
@@ -64,11 +73,9 @@ $(document).ready(function() {
     event.preventDefault();
     if ($("textarea").val().length > 140) {
       $(".error").text("too much");
-      $("textarea").val("");
-      $(".counter").text(140);
+      //$(".counter").text(140);
     } else if ($("textarea").val().length == 0) {
       $(".error").text("empty tweet");
-      $("textarea").val("");
       $(".counter").text(140);
     } else {
       $(".error").text("")
@@ -77,6 +84,7 @@ $(document).ready(function() {
         type: "POST",
         data: $("textarea").serialize(),
         success: function() {
+
           loadTweets();
           $("textarea").val("");
           $(".counter").text(140);
@@ -86,3 +94,5 @@ $(document).ready(function() {
     }
   });
 });
+
+

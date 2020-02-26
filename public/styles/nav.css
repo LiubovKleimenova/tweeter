@@ -1,4 +1,6 @@
 nav {
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,5 +16,19 @@ nav {
 h1 {
   font-family: "Bungee";
   font-size: inherit;
+  margin: 0;
+  align-self: center;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.nav-button span {
+  font-weight: 700;
 }
 
