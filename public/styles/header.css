@@ -3,13 +3,14 @@ body > header {
   position: relative;
   height: 400px;
   width: 100%;
-  background-color: #b84a00;
+  background-color: #4056A1;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  color: white;
 }
 
 .profile-pic {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 45px;
 }
 
 header h2 {

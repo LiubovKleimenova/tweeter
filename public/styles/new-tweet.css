@@ -16,6 +16,7 @@
 
 .new-tweet input {
   border: none;
+  border-radius: 5px;
   font-family: "Bungee";
   font-size: 0.75em;
   padding: 5px;

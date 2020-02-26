@@ -11,7 +11,8 @@ nav {
   color: #FFFFFF; 
 }
 
-nav > span {
+h1 {
   font-family: "Bungee";
+  font-size: inherit;
 }
 

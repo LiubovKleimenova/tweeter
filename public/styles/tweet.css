@@ -1,18 +1,18 @@
-article {
+.tweet {
   border: 3px solid #545149;;
   width: 100%;
   margin-top: 20px;
   padding: 5px 10px 5px;
 }
 
-article header {
+.tweet-header {
   display: flex;
   justify-content: space-between;
   outline: 1px solid green;
   font-weight: 300;
 }
 
-article header div {
+.tweet-header div {
   display: flex;
   align-items: center;
 }
@@ -22,7 +22,7 @@ article header div {
 }
 
 
-article main {
+.tweet-main {
   width: 100%;
   margin-top: 30px;
   padding-bottom: 20px;
@@ -31,20 +31,35 @@ article main {
   font-weight: 300;
 }
 
-article footer {
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
   font-size: 0.6em;
   padding: 0 10px;
   outline: 1px dashed blue;
 }
 
-article:hover {
+.tweet-footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.tweet-footer li {
+  width: 10px;
+  height: 10px;
+  outline: 1px solid orangered;
+  margin-left: 5px;
+}
+
+.tweet:hover {
   box-shadow: 10px 10px 10px grey;
   font-weight: 400;
 }
 
-article:hover header,
-article:hover main, 
-article:hover footer {
+.tweet:hover header,
+.tweet:hover main, 
+.tweet:hover footer {
   font-weight: 400;
 }
 
@@ -52,6 +67,6 @@ article:hover footer {
   color: transparent;
 }
 
-article:hover .username {
+.tweet:hover .username {
   color: lightgrey;
 }

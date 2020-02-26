@@ -15,6 +15,7 @@ html {
  */
 
 body {
+  margin-bottom: 30px;
   position: relative;
   font-family: "Source Sans Pro", Arial, sans-serif;
   color: #545149;
