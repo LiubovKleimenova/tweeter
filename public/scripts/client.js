@@ -21,23 +21,12 @@ $(document).ready(function() {
     $.ajax({
       url: `/tweets`,
       type: "GET",
-      dataType: "JSON"
+      dataType: "JSON",
+      success: response => {
+        //console.log(response.data)
+        renderTweets(response);
+      }
     })
-      .then(response => {
-        renderTweets(response.data.children);
-       
-        //$("#app").append(renderedPosts);
-        // document.getElementById('app').append(renderedPosts)
-      })
-      .catch(() => {
-        const errorMessage = `
-        <div class="error">
-          <h1>Whoops, something went wrong!</h1>
-        </div>
-      `;
-
-        $("#app").append(errorMessage);
-      });
   }
   
 
@@ -69,6 +58,7 @@ $(document).ready(function() {
   ];
 
   const renderTweets = function(tweets) {
+    $(".tweet-container").empty()
     for (let tweet of tweets) {
       $(".tweet-container").append(createTweetElement(tweet));
     }
