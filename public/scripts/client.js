@@ -5,15 +5,41 @@
  */
 
 $(document).ready(function() {
+
+  //add 
   $('#new-tweet').submit(function (event) {
     event.preventDefault();
     $.ajax({
       url: "/tweets/",
       type: "POST",
-      dataType: $("#new-tweet")
-        .serialize()
+      data: $("textarea").serialize()
     });
-  })
+    loadTweets();
+  });
+
+  const loadTweets = function () {
+    $.ajax({
+      url: `/tweets`,
+      type: "GET",
+      dataType: "JSON"
+    })
+      .then(response => {
+        renderTweets(response.data.children);
+       
+        //$("#app").append(renderedPosts);
+        // document.getElementById('app').append(renderedPosts)
+      })
+      .catch(() => {
+        const errorMessage = `
+        <div class="error">
+          <h1>Whoops, something went wrong!</h1>
+        </div>
+      `;
+
+        $("#app").append(errorMessage);
+      });
+  }
+  
 
   const SECONDS = 86400000; //24*60*60*1000 number of milliseconds in 1 day
   const data = [
