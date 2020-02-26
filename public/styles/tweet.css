@@ -29,6 +29,7 @@
   border-bottom: 3px solid #545149;
   outline: 1px dashed orange;
   font-weight: 300;
+  word-break: break-word;
 }
 
 .tweet-footer {

@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const loadTweets = function () {
+const loadTweets = function() {
   $.ajax({
     url: `/tweets`,
     type: "GET",
@@ -12,13 +12,13 @@ const loadTweets = function () {
       //console.log(response.data)
       renderTweets(response);
     }
-  })
-}
+  });
+};
 
 const SECONDS = 86400000; //24*60*60*1000 number of milliseconds in 1 day
 
 const renderTweets = function(tweets) {
-  $(".tweet-container").empty()
+  $(".tweet-container").empty();
   for (let tweet of tweets) {
     $(".tweet-container").prepend(createTweetElement(tweet));
   }
@@ -59,24 +59,30 @@ const createTweetElement = function(tweet) {
 $(document).ready(function() {
   loadTweets();
 
-  //add 
-  $('#new-tweet').submit(function (event) {
+  //add
+  $("#new-tweet").submit(function(event) {
     event.preventDefault();
-    $.ajax({
-      url: "/tweets/",
-      type: "POST",
-      data: $("textarea").serialize(),
-      success: function () {
-        loadTweets();
-        $("textarea").val("");
-        $(".counter").text(140);
-      }
-
-    });
-    //loadTweets();
+    if ($("textarea").val().length > 140) {
+      $(".error").text("too much");
+      $("textarea").val("");
+      $(".counter").text(140);
+    } else if ($("textarea").val().length == 0) {
+      $(".error").text("empty tweet");
+      $("textarea").val("");
+      $(".counter").text(140);
+    } else {
+      $(".error").text("")
+      $.ajax({
+        url: "/tweets/",
+        type: "POST",
+        data: $("textarea").serialize(),
+        success: function() {
+          loadTweets();
+          $("textarea").val("");
+          $(".counter").text(140);
+          $(".error").text("")
+        }
+      });
+    }
   });
-
-
-
-  
 });
