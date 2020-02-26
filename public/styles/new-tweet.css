@@ -1,7 +1,6 @@
 .new-tweet {
   background-color: transparent;
   margin-top: -195px;
-  outline: 3px dashed fuchsia;
   transition: margin 1s;
   transition-timing-function: linear;
 }
@@ -17,6 +16,7 @@
   color: #545149;
   border-bottom: 2px solid #545149;
 }
+
 
 .new-tweet input {
   border: none;
@@ -35,9 +35,10 @@
 }
 
 .error {
+  display: none;
   font-family: "Bungee";
   font-size: 0.75em;
-  color: red
+  color: red;
 }
 
 .red-font {

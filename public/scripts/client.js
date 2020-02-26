@@ -46,9 +46,9 @@ const createTweetElement = function(tweet) {
         <footer class="tweet-footer">
           <p>${Math.round((Date.now() - tweetDate) / SECONDS)} days ago</p>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><img width="16" height="16" src="https://www.pinclipart.com/picdir/middle/0-3647_download-flag-icon-png-clipart-flag-clip-art.png"></li>
+            <li><img width="16" height="16" src="https://cdn3.iconfinder.com/data/icons/twitter-20/512/166_Heart_Love_Like_Twitter-512.png"></li>
+            <li><img width="16" height="16" src="https://www.pikpng.com/pngl/m/16-169951_retweet-twitter-png-retweet-icon-clipart.png"></li>
           </ul>
         </footer>
       </article>`;
@@ -72,10 +72,12 @@ $(document).ready(function() {
   $("#new-tweet").submit(function(event) {
     event.preventDefault();
     if ($("textarea").val().length > 140) {
-      $(".error").text("too much");
+      $(".error")
+        .text("Your tweet is too long")
+        .fadeIn(500);
       //$(".counter").text(140);
     } else if ($("textarea").val().length == 0) {
-      $(".error").text("empty tweet");
+      $(".error").text("empty tweet").fadeIn(500);
       $(".counter").text(140);
     } else {
       $(".error").text("")

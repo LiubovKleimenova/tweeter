@@ -7,6 +7,7 @@ $(document).ready(function() {
   $(".nav-button").click(function() {
     if (!position) {
     $(".new-tweet").addClass("up");
+    $(".new-tweet textarea").focus();
     position = 1
     } else {
       $(".new-tweet").removeClass("up");

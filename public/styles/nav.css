@@ -28,7 +28,7 @@ h1 {
   font-weight: 400;
 }
 
-.nav-button span {
-  font-weight: 700;
+.nav-button svg {
+  padding-top: 5px;
 }
 

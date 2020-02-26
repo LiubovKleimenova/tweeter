@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
-    <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,400i,700,700i&display=swap"
-      rel="stylesheet">
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,400i,700,700i&display=swap"
+    rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
+
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/counter.js"></script>
+  <script type="text/javascript" src="/scripts/button.js"></script>
+</head>
+
+<body>
+  <nav>
+    <h1>tweeter</h1>
     
-
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/counter.js"></script>
-    <script type="text/javascript" src="/scripts/button.js"></script>
-  </head>
-
-  <body>
-    <nav>
-      <h1>tweeter</h1>
-      <button class="nav-button" type="button" onclick="console.log(`!`)">
+      <button class="nav-button" type="button">
         <b>Write</b> a new tweet
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="20px" height="20px" viewBox="0 0 292.362 292.362"
+          style="enable-background:new 0 0 292.362 292.362;" xml:space="preserve">
+          <g>
+            <path fill="#ffffff"
+              d="M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424
+      C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428
+      s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z" />
+          </g>
+        </svg>
       </button>
-    </nav>
-    <header>
-        <img class = "profile-pic" src="/images/profile-hex.png">
-        <h2>Luba K</h2>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form id="new-tweet" method="POST" action="/tweets/">
-          <textarea name="text" placeholder="What are you humming about?" rows="1"></textarea>
-          <input id="submit-button" type="submit" value="Tweet">
-          <span class="error"></span>
-          <span class="counter">140</span>
-        </form>
-        
+    
+  </nav>
+  <header>
+    <img class="profile-pic" src="/images/profile-hex.png">
+    <h2>Luba K</h2>
+  </header>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form id="new-tweet" method="POST" action="/tweets/">
+        <div class="error"></div>
+        <textarea name="text" placeholder="What are you humming about?" rows="1"></textarea>
+        <input id="submit-button" type="submit" value="Tweet">
+        <!-- <span class="error"></span> -->
+        <span class="counter">140</span>
+      </form>
 
-        <!-- <article class="tweet">
+
+      <!-- <article class="tweet">
           <header class="tweet-header">
             <div>
               <img class="userphoto" src="./images/profile-hex.png" alt="user photo" width="70" height="70">
@@ -73,11 +88,12 @@
         </article>
  -->
 
-      </section>
-      <section class="tweet-container">
-        
-      </section>
-      
-    </main>
-  </body>
+    </section>
+    <section class="tweet-container">
+
+    </section>
+
+  </main>
+</body>
+
 </html>
