@@ -66,7 +66,12 @@ $(document).ready(function() {
       url: "/tweets/",
       type: "POST",
       data: $("textarea").serialize(),
-      success: loadTweets()
+      success: function () {
+        loadTweets();
+        $("textarea").val("");
+        $(".counter").text(140);
+      }
+
     });
     //loadTweets();
   });
