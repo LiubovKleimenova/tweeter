@@ -43,13 +43,16 @@
   display: flex;
   justify-content: space-between;
   list-style: none;
+  padding: 0;
+  outline: 2px dashed turquoise
 }
 
 .tweet-footer li {
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0 0 0 10px;
   outline: 1px solid orangered;
-  margin-left: 5px;
 }
 
 .tweet:hover {

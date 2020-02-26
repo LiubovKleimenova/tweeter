@@ -5,6 +5,16 @@
  */
 
 $(document).ready(function() {
+  $('#new-tweet').submit(function (event) {
+    event.preventDefault();
+    $.ajax({
+      url: "/tweets/",
+      type: "POST",
+      dataType: $("#new-tweet")
+        .serialize()
+    });
+  })
+
   const SECONDS = 86400000; //24*60*60*1000 number of milliseconds in 1 day
   const data = [
     {
