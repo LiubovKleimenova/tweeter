@@ -1,15 +1,12 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+// client js logic
+
+//function to load data for tweets from database
 const loadTweets = function() {
   $.ajax({
     url: `/tweets`,
     type: "GET",
     dataType: "JSON",
     success: response => {
-      //console.log(response.data)
       renderTweets(response);
     }
   });
@@ -17,6 +14,8 @@ const loadTweets = function() {
 
 const SECONDS = 86400000; //24*60*60*1000 number of milliseconds in 1 day
 
+
+//f-n that renders tweets in tweets container in HTML
 const renderTweets = function(tweets) {
   $(".tweet-container").empty();
   for (let tweet of tweets) {
@@ -24,6 +23,8 @@ const renderTweets = function(tweets) {
   }
 };
 
+
+//function to render one new tweet
 const createTweetElement = function(tweet) {
   //let {name, avatar, handle} = tweet.user;
   let tweetContent = tweet.content.text;
@@ -56,6 +57,7 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
+//function to protect input form from malicious scripts
 const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -63,38 +65,35 @@ const escape = function(str) {
 };
 
 
+//main logic: when document is ready 
 $(document).ready(function() {
-
-  
   loadTweets();
 
-  //add
+  //fn to check input before submission
   $("#new-tweet").submit(function(event) {
     event.preventDefault();
     if ($("textarea").val().length > 140) {
       $(".error")
         .text("Your tweet is too long")
         .fadeIn(500);
-      //$(".counter").text(140);
     } else if ($("textarea").val().length == 0) {
-      $(".error").text("empty tweet").fadeIn(500);
+      $(".error")
+        .text("empty tweet")
+        .fadeIn(500);
       $(".counter").text(140);
     } else {
-      $(".error").text("")
+      $(".error").text("");
       $.ajax({
         url: "/tweets/",
         type: "POST",
         data: $("textarea").serialize(),
         success: function() {
-
           loadTweets();
           $("textarea").val("");
           $(".counter").text(140);
-          $(".error").text("")
+          $(".error").text("");
         }
       });
     }
   });
 });
-
-
