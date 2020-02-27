@@ -34,3 +34,30 @@ body {
    margin: 0 auto;
    background-color: inherit;
  }
+
+ .flex-wrapper {
+  
+   position: relative;
+ }
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  .flex-wrapper {
+    display: flex;
+    margin: 1em;
+  }
+
+  .container {
+    margin-top: 90px;
+  }
+  
+  .flex-wrapper  header {
+    margin-right: 2%;
+    flex-shrink: 1;
+  }
+
+  .flex-wrapper main {
+    flex-grow: 3;
+  }
+}
+

@@ -68,3 +68,12 @@
 .tweet:hover .username {
   color: lightgrey;
 }
+
+
+@media only screen and (min-width: 768px) {
+  .tweet-container {
+    /* margin-top: 120px; */
+  }
+
+  
+}

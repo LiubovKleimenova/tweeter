@@ -1,4 +1,4 @@
-body > header {
+ .flex-wrapper > header {
   margin-top: 120px;
   position: relative;
   z-index: 300;
