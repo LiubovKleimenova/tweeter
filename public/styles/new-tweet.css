@@ -50,3 +50,7 @@
   margin-top: 0;
   transition: all 1s;
 }
+
+.show {
+  display: block;
+}

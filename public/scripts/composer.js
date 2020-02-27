@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $(document).scroll(function() {
+    let flag = 0;
     console.log($(document).scrollTop());
     $(".scroll-button").addClass("scroll-on");
     if ($(document).scrollTop() === 0) {
@@ -12,8 +13,11 @@ $(document).ready(function() {
     }
   })
       $(".scroll-button").on('click', function() {
+        flag = 1;
         $(document).scrollTop(0,0);
-        $(".new-tweet").slideToggle("slow");
+        if (flag === 1) {
+        $(".new-tweet").addClass("show");
+      }
         $(".new-tweet textarea").focus();
       })
 })
