@@ -45,7 +45,7 @@ const createTweetElement = function(tweet) {
         </main>
         <footer class="tweet-footer">
           <p>${Math.round((Date.now() - tweetDate) / SECONDS)} days ago</p>
-          <ul>
+          <ul class="icons">
             <li><img width="16" height="16" src="https://www.pinclipart.com/picdir/middle/0-3647_download-flag-icon-png-clipart-flag-clip-art.png"></li>
             <li><img width="16" height="16" src="https://cdn3.iconfinder.com/data/icons/twitter-20/512/166_Heart_Love_Like_Twitter-512.png"></li>
             <li><img width="16" height="16" src="https://www.pikpng.com/pngl/m/16-169951_retweet-twitter-png-retweet-icon-clipart.png"></li>

@@ -37,7 +37,7 @@
 }
 
 .tweet-footer ul {
-  display: flex;
+  display: none;
   justify-content: space-between;
   list-style: none;
   padding: 0;
@@ -69,4 +69,7 @@
   color: lightgrey;
 }
 
+.tweet:hover ul {
+  display: flex;
+}
 
