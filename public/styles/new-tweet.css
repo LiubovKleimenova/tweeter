@@ -1,6 +1,7 @@
 .new-tweet {
+  display: none;
   background-color: transparent;
-  margin-top: -195px;
+  /* margin-top: -195px; */
   transition: margin 1s;
   transition-timing-function: linear;
 }

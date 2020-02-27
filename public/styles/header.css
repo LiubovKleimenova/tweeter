@@ -3,10 +3,11 @@
   position: relative;
   z-index: 300;
   height: 400px;
-  width: 100%;
-  background-color: #4056A1;
+  /* width: 100%; */
+  background-color:rgb(156, 48, 9);
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   color: white;
+  transition: background-color 1s;
 }
 
 .profile-pic {
@@ -16,4 +17,16 @@
 
 header h2 {
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .flex-wrapper > header {
+    margin-top: 107px;
+    background-color: rgb(156, 48, 9);
+    background-image: none;
+    transition: background-color 1s;
+
+  }
+
+
 }

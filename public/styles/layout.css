@@ -51,9 +51,9 @@ body {
     margin-top: 90px;
   }
   
-  .flex-wrapper  header {
+  .flex-wrapper > header {
     margin-right: 2%;
-    flex-shrink: 1;
+    flex-grow: 2;
   }
 
   .flex-wrapper main {
