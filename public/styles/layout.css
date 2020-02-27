@@ -36,10 +36,34 @@ body {
  }
 
  .flex-wrapper {
-  
    position: relative;
  }
 
+ .scroll-button {
+   display: none;
+   width: 55px;
+   height: 55px;
+   background-color: #4056a1;
+   opacity: 0.5;
+   transform: rotate(180deg);
+   border-radius: 50%;
+   border: none;
+   position: fixed;
+   z-index: 999;
+   right: 50px;
+   bottom: 50px;
+   transition: opacity 0.5s;
+ }
+
+ .scroll-on {
+   display:block;
+ }
+
+ .scroll-button:hover {
+   cursor: pointer;
+   opacity: 1;
+   transition: opacity 0.5s;
+ }
 /* Tablet Styles */
 @media only screen and (min-width: 768px) {
   .flex-wrapper {

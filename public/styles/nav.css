@@ -9,7 +9,7 @@ nav {
   width: 100vw;
   padding: 1.5em;
   z-index: 3000;
-  background-color: rgb(156, 48, 9);
+  background-color: coral;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   transition: background-color 0.5s;
   color: #FFFFFF; 
@@ -28,10 +28,15 @@ h1 {
   color: white;
   font-size: 0.8em;
   font-weight: 400;
+  cursor: pointer;
 }
 
-.nav-button svg {
+.nav-button img {
   padding-top: 5px;
+}
+
+.btn-off {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {

@@ -4,10 +4,10 @@
   z-index: 300;
   height: 400px;
   /* width: 100%; */
-  background-color:rgb(156, 48, 9);
+  background-color: coral;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   color: white;
-  transition: background-color 1s;
+  transition: background-color 0.5s;
 }
 
 .profile-pic {
@@ -22,9 +22,9 @@ header h2 {
 @media only screen and (min-width: 768px) {
   .flex-wrapper > header {
     margin-top: 107px;
-    background-color: rgb(156, 48, 9);
+    background-color:coral;
     background-image: none;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
 
   }
 
