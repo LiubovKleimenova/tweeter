@@ -15,3 +15,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+##Screenshots
+!["Screenshot of index page"](https://raw.githubusercontent.com/LiubovKleimenova/tweeter/master/docs/indexpage.png)
+!["Screenshot of display of error"](https://raw.githubusercontent.com/LiubovKleimenova/tweeter/master/docs/emptyMessageError.png)
+!["Screenshot of display for a scroll button"](https://raw.githubusercontent.com/LiubovKleimenova/tweeter/master/docs/scrollButton.png)
