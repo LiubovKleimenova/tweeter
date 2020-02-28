@@ -76,7 +76,7 @@ $(document).ready(function() {
       $(".error")
         .text("Your tweet is too long")
         .fadeIn(500);
-    } else if ($("textarea").val().length == 0) {
+    } else if ($("textarea").val().trim().length == 0) {
       $(".error")
         .text("empty tweet")
         .fadeIn(500);
